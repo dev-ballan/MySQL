@@ -42,7 +42,7 @@ nome varchar(255) NOT NULL,
 quantidade int, 
 dtvalidade date NULL,
 preco decimal(6, 2),
-categoria_id bigint, 
+categoria_id bigint,
 PRIMARY KEY (id),
 FOREIGN KEY (categoria_id) REFERENCES tb_categorias(id)
 );
@@ -138,7 +138,7 @@ SELECT max(preco) FROM tb_produtos;
 SELECT min(preco) FROM tb_produtos;
 
 SELECT * FROM tb_produtos INNER JOIN tb_categorias
-ON tb_produtos.categoria_id = tb_categorias.id; -- comparação 
+ON tb_produtos.categoria_id = tb_categorias.id; -- comparação  
 
 SELECT nome, preco, tb_categorias.descricao 
 FROM tb_produtos INNER JOIN tb_categorias
