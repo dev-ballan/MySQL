@@ -20,13 +20,16 @@ create table tb_colaboradores(
     insert into tb_colaboradores(nome, cargo, idade, salario)
 	values("José", "Engenheiro da Produção", 25, 3.000);
     
-	alter table tb_colaboradores modify salario decimal(6,2);
+	alter table tb_colaboradores modify salario decimal(8,2);
        
     select * from tb_colaboradores;
     select nome, concat('R$ ', format(salario, 3, 'pt_BR')) as salário from tb_colaboradores;
-    select * from tb_colaboradores where salario > 2.000;
-	select * from tb_colaboradores where salario <= 2.000;
+    select * from tb_colaboradores where salario > 2000.00;
+	select * from tb_colaboradores where salario <= 2000.00;
 	select * from tb_colaboradores;
+    
+    update tb_colaboradores set salario = 1.000 where id = 3;
+    select * from tb_colaboradores; 
  
     
     
